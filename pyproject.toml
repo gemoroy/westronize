@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "westronize"
+version = "0.1.0"
+description = "A modular LOTRO localization patcher."
+authors = [
+    { name = "gemoroy", email = "mr.gemoroy@icloud.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.scripts]
+westronize = "westronize.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["westronize*"]
